@@ -74,7 +74,7 @@ export default function Login() {
       <div
         className="min-h-[calc(100vh-112px-268.8px)] relative hidden md:flex w-1/2 justify-center items-center bg-cover bg-no-repeat bg-center"
       >
-        <img className='h-56 min-h-[calc(100vh-112px-268.8px)] object-contain' src="/imgs/Login.jpg" alt="" />
+        <img className='h-56 min-h-[calc(100vh-112px-268.8px)] object-contain' src="./imgs/Login.jpg" alt="" />
         <div className="absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-orange-400 border-t-8"></div>
         <div className="absolute -bottom-40 -left-20 w-80 h-80 border-4 rounded-full border-orange-400 border-t-8"></div>
         <div className="absolute -top-40 -right-0 w-80 h-80 border-4 rounded-full border-orange-400 border-t-8"></div>

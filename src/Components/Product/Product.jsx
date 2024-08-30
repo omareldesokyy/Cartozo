@@ -154,7 +154,7 @@ export default function Product({ product }) {
                 }}  className="text-xl font-semibold mt-1">{product.price} L.E</div>
 
                         <button onClick={() => { useAddToCart(product?.id, product) }} className="mt-3 transition ease-in duration-300 inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-teal-500 px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-full hover:bg-teal-600 ">
-                            <img className='h-7' src="/imgs/add-to-the-cart.svg" alt="add to cart icon" />
+                            <img className='h-7' src="./imgs/add-to-the-cart.svg" alt="add to cart icon" />
                         </button>
 
                     </div>
