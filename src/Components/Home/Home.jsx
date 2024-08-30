@@ -16,7 +16,7 @@ export default function Home() {
         </h1>
         <p>Unlimited Choices, Delivered to You.</p>
         <div className="mt-12">
-          <Link to={"/products"} className="bg-primary border border-[#334155] text-[#334155] px-8 py-3 font-medium 
+          <Link to={"/Cartozo/products"} className="bg-primary border border-[#334155] text-[#334155] px-8 py-3 font-medium 
               rounded-md hover:bg-orange-400 duration-200">Shop Now</Link>
         </div>
       </div>

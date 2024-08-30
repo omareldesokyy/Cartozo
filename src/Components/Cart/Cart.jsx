@@ -95,11 +95,11 @@ export default function Cart() {
                 </dl>
               </div>
 
-              <Link className='cursor-pointer text-center duration-300 text-sm font-medium bg-teal-500 px-5 py-2 hover:shadow-lg text-white rounded-full hover:bg-teal-600  flex justify-center w-full' to={'/ShippingAddress/' + cart._id}>Proceed to Checkout</Link>
+              <Link className='cursor-pointer text-center duration-300 text-sm font-medium bg-teal-500 px-5 py-2 hover:shadow-lg text-white rounded-full hover:bg-teal-600  flex justify-center w-full' to={'/Cartozo/ShippingAddress/' + cart._id}>Proceed to Checkout</Link>
 
               <div className="flex items-center justify-center gap-2">
                 <span className="text-sm font-normal text-gray-500 dark:text-gray-400"> or </span>
-                <Link to={'/products'} title="" className="inline-flex items-center gap-2 text-sm font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">
+                <Link to={'/Cartozo/products'} title="" className="inline-flex items-center gap-2 text-sm font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">
                   Continue Shopping
                   <svg className="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 12H5m14 0-4 4m4-4-4-4" />
@@ -122,7 +122,7 @@ export default function Cart() {
       </div> : <>
         <div className="flex flex-col items-center justify-center gap-2">
           <h1 className='' >No products in your cart</h1>
-          <Link to={'/products'} title="" className="inline-flex items-center gap-2 text-sm font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">
+          <Link to={'/Cartozo/products'} className="inline-flex items-center gap-2 text-sm font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">
             Continue Shopping
             <svg className="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 12H5m14 0-4 4m4-4-4-4" />

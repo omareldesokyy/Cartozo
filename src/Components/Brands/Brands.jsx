@@ -23,7 +23,7 @@ export default function Brands() {
     const navigate = useNavigate();
 
     function goToProductsByBrand(id) {
-        navigate('/products/brand/' + id)
+        navigate('/Cartozo/products/brand/' + id)
     }
 
 

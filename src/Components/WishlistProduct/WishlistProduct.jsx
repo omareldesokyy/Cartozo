@@ -19,7 +19,7 @@ export default function WishlistProduct({ product, onRemove }) {
     };
 
     function goToProductDetails() {
-        navigate('/ProductDetails/' + product.id);
+        navigate('/Cartozo/ProductDetails/' + product.id);
     }
 
     function removeFromWishlist(id) {

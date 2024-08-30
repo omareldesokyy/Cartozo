@@ -25,7 +25,7 @@ export default function Categories() {
     const navigate = useNavigate();
 
     function goToProductsByCategory(id) {
-        navigate('/products/category/' + id)
+        navigate('/Cartozo/products/category/' + id)
     }
 
 

@@ -31,7 +31,7 @@ export default function Login() {
     axios.post('https://ecommerce.routemisr.com/api/v1/auth/signin', values)
       .then(({ data }) => {
         setIsLoading(false);
-        const targetPath = location.pathname === '/login' ? '/home' : location.pathname;
+        const targetPath = location.pathname === '/Cartozo/login' ? '/Cartozo/home' : location.pathname;
         navigate(targetPath);
         setToken(data.token);
         localStorage.setItem('token', data.token);
@@ -46,6 +46,7 @@ export default function Login() {
           progress: undefined,
           transition: Bounce,
         });
+        
       })
       .catch(({ response }) => {
         setIsLoading(false);
@@ -63,7 +64,7 @@ export default function Login() {
   }
 
 
-  let { handleBlur, handleChange, handleSubmit, values, errors, touched } = useFormik({
+  let { handleBlur, handleChange, handleSubmit, values } = useFormik({
     initialValues,
     onSubmit,
     validationSchema,
@@ -102,9 +103,9 @@ export default function Login() {
           </div>
           <button type="submit" className="block w-full bg-teal-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2 disabled:bg-gray-300" disabled={isLoading}>Login {isLoading && <i class="fa-solid fa-spinner fa-spin"></i>}</button>
           <div className='flex flex-col justify-center items-center'>
-            <p className="text-sm ml-2 cursor-pointer">Do not have an account ?  <Link className='hover:text-teal-500 text-[16px] font-semibold' to={'/signup'}> Signup </Link></p>
+            <p className="text-sm ml-2 cursor-pointer">Do not have an account ?  <Link className='hover:text-teal-500 text-[16px] font-semibold' to={'/Cartozo/signup'}> Signup </Link></p>
             <p>or</p>
-            <p className="text-sm ml-2 cursor-pointer"><Link className='hover:text-teal-500 text-[16px] font-semibold' to={'/forgotPassword'}> Forget your password ?</Link></p>
+            <p className="text-sm ml-2 cursor-pointer"><Link className='hover:text-teal-500 text-[16px] font-semibold' to={'/Cartozo/forgotPassword'}> Forget your password ?</Link></p>
           </div>
         </form>
       </div>

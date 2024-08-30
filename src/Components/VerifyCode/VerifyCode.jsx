@@ -24,7 +24,7 @@ export default function VerifyCode() {
         axios.post('https://ecommerce.routemisr.com/api/v1/auth/verifyResetCode', values)
             .then(() => {
                 setIsLoading(false)
-                navigate('/forgotPassword/resetPassword')
+                navigate('/Cartozo/forgotPassword/resetPassword')
 
             })
             .catch(({ response }) => {

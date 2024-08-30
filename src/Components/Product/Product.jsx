@@ -27,7 +27,7 @@ export default function Product({ product }) {
 
     function goToProductDetails() {
         axios.get('https://ecommerce.routemisr.com/api/v1/products/').then(() => {
-            navigate('/ProductDetails/' + product.id)
+            navigate('/Cartozo/ProductDetails/' + product.id)
         })
 
 

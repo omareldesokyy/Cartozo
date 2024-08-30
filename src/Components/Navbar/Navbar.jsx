@@ -45,7 +45,7 @@ export default function Navbar() {
       <nav className="container m-auto relative max-lg:space-y-4 text-white select-none bg-grey lg:flex lg:items-stretch w-full ">
         <div className="flex text-2xl flex-no-shrink items-stretch h-12">
           <img src="/Cartozo/imgs/shopping-cart.svg" alt="cart logo" />
-          <a href="#" className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal no-underline flex items-center hover:bg-grey-dark">Cartozo</a>
+          <Link to={'/Cartozo/'} className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal no-underline flex items-center hover:bg-grey-dark">Cartozo</Link>
           <button onClick={NavList} id='navBtn' className="block lg:hidden cursor-pointer ml-auto">
             <div className='flex justify-center items-center gap-4 bg-teal-500 border border-transparent duration-300 relative px-3 py-2 rounded-md focus:outline focus:outline-white'>
               <span>Menu</span>
@@ -55,22 +55,22 @@ export default function Navbar() {
         </div>
         {token && <>
           <div id='nav-items' className="hidden gap-3 lg:flex lg:items-stretch lg:justify-end ml-auto">
-            <NavLink to={'/home'} className="border border-transparent  duration-300 relative ms-2 py-2 px-4 leading-normal no-underline flex items-center rounded-md  hover:border-teal-500">Home</NavLink>
-            <NavLink to={'/products'} className="border border-transparent relative py-2 duration-300  px-4 leading-normal no-underline flex items-center rounded-md  hover:border-teal-500">Products</NavLink>
-            <NavLink to={'/categories'} className="border border-transparent relative py-2  duration-300 px-4 leading-normal no-underline flex items-center rounded-md  hover:border-teal-500">Categories</NavLink>
-            <NavLink to={'/brands'} className="border border-transparent relative py-2  duration-300 px-4 leading-normal no-underline flex items-center rounded-md  hover:border-teal-500">Brands</NavLink>
+            <NavLink to={'Cartozo/home'} className="border border-transparent  duration-300 relative ms-2 py-2 px-4 leading-normal no-underline flex items-center rounded-md  hover:border-teal-500">Home</NavLink>
+            <NavLink to={'Cartozo/products'} className="border border-transparent relative py-2 duration-300  px-4 leading-normal no-underline flex items-center rounded-md  hover:border-teal-500">Products</NavLink>
+            <NavLink to={'Cartozo/categories'} className="border border-transparent relative py-2  duration-300 px-4 leading-normal no-underline flex items-center rounded-md  hover:border-teal-500">Categories</NavLink>
+            <NavLink to={'Cartozo/brands'} className="border border-transparent relative py-2  duration-300 px-4 leading-normal no-underline flex items-center rounded-md  hover:border-teal-500">Brands</NavLink>
           </div>
           <div id='nav-icons' className="hidden gap-3 lg:flex lg:items-center lg:justify-end ml-auto ">
-            <Link to={'/wishlist'} className="h-16 border border-transparent relative py-2 px-4 leading-normal duration-300 no-underline flex items-center rounded-md transition-all hover:animate-bounce "><img src="/Cartozo/imgs/wishlist.png" alt="go to cart image" className='h-full' /></Link>
-            <Link to={'/cart'} className="h-16 border border-transparent relative py-2 px-4 leading-normal duration-300 no-underline flex items-center rounded-md transition-all hover:animate-slideX "><img src="/Cartozo/imgs/cart-check.svg" alt="go to cart image" className='h-full' /></Link>
+            <Link to={'Cartozo/wishlist'} className="h-16 border border-transparent relative py-2 px-4 leading-normal duration-300 no-underline flex items-center rounded-md transition-all hover:animate-bounce "><img src="/Cartozo/imgs/wishlist.png" alt="go to cart image" className='h-full' /></Link>
+            <Link to={'Cartozo/cart'} className="h-16 border border-transparent relative py-2 px-4 leading-normal duration-300 no-underline flex items-center rounded-md transition-all hover:animate-slideX "><img src="/Cartozo/imgs/cart-check.svg" alt="go to cart image" className='h-full' /></Link>
             <img onClick={signout} src='/Cartozo/imgs/logout.svg' alt='logout image' className="h-10 duration-300 ps-3  ms-2 cursor-pointer relative transition-all hover:translate-x-2" />
           </div>
         </>
         }
         {!token && <>
           <div id='nav-items' className="hidden gap-3 lg:flex lg:items-stretch lg:justify-end ml-auto">
-            <Link to={'/login'} className="border border-transparent  duration-300 relative ms-2 py-2 px-4 leading-normal no-underline flex items-center rounded-md  hover:border-teal-500">Login</Link>
-            <Link to={'/signup'} className="border border-transparent relative py-2 duration-300  px-4 leading-normal no-underline flex items-center rounded-md  hover:border-teal-500">Signup</Link>
+            <Link to={'Cartozo/login'} className="border border-transparent  duration-300 relative ms-2 py-2 px-4 leading-normal no-underline flex items-center rounded-md  hover:border-teal-500">Login</Link>
+            <Link to={'Cartozo/signup'} className="border border-transparent relative py-2 duration-300  px-4 leading-normal no-underline flex items-center rounded-md  hover:border-teal-500">Signup</Link>
             </div>
         </>
         }

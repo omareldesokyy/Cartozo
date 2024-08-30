@@ -174,7 +174,7 @@ export default function AllOrders() {
     </section> : <>
       <div className="flex flex-col items-center justify-center min-h-[calc(100vh-128px-268.8px)] gap-2">
         <h1 className='' >No Orders Found</h1>
-        <Link to={'/products'} title="" className="inline-flex items-center gap-2 text-sm font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">
+        <Link to={'/Cartozo/products'} title="" className="inline-flex items-center gap-2 text-sm font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">
           Continue Shopping
           <svg className="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 12H5m14 0-4 4m4-4-4-4" />

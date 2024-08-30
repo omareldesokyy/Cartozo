@@ -30,23 +30,23 @@ export default function App() {
   const router = createBrowserRouter([
     {
       path: '', element: <Layout />, children: [
-        { path:'' , element: <ProtectedRoute> <Home /> </ProtectedRoute> },
-        { path: 'home', element: <ProtectedRoute> <Home /> </ProtectedRoute> },
-        { path: 'cart', element: <ProtectedRoute> <Cart /> </ProtectedRoute> },
-        { path: 'products', element: <ProtectedRoute> <Products /> </ProtectedRoute> },
-        { path: 'login', element: <ProtectAuthRoutes> <Login /> </ProtectAuthRoutes> },
-        { path: 'forgotPassword', element: <ProtectAuthRoutes> <ForgotPassword /> </ProtectAuthRoutes> },
-        { path: 'signup', element: <ProtectAuthRoutes> <Signup /> </ProtectAuthRoutes> },
-        { path: 'allorders', element: <ProtectedRoute> <AllOrders /> </ProtectedRoute> },
-        { path: 'products/category/:id', element: <ProtectedRoute> <ProductsByCategory /> </ProtectedRoute> },
-        { path: 'products/brand/:id', element: <ProtectedRoute> <ProductsByBrand /> </ProtectedRoute> },
-        { path: 'ProductDetails/:id', element: <ProtectedRoute> <ProductDetails /> </ProtectedRoute> },
-        { path: 'ShippingAddress/:id', element: <ProtectedRoute> <ShippingAddress /> </ProtectedRoute> },
-        { path: 'categories', element: <ProtectedRoute> <Categories /> </ProtectedRoute> },
-        { path: 'wishlist', element: <ProtectedRoute> <Wishlist /> </ProtectedRoute> },
-        { path: 'brands', element: <ProtectedRoute> <Brands /> </ProtectedRoute> },
-        { path: 'forgotPassword/resetPassword', element: <ProtectAuthRoutes> <ResetPassword /> </ProtectAuthRoutes> },
-        { path: '*', element: <NotFound /> },
+        { path:'/Cartozo/' , element: <ProtectedRoute> <Home /> </ProtectedRoute> },
+        { path: '/Cartozo/home', element: <ProtectedRoute> <Home /> </ProtectedRoute> },
+        { path: '/Cartozo/cart', element: <ProtectedRoute> <Cart /> </ProtectedRoute> },
+        { path: '/Cartozo/products', element: <ProtectedRoute> <Products /> </ProtectedRoute> },
+        { path: '/Cartozo/login', element: <ProtectAuthRoutes> <Login /> </ProtectAuthRoutes> },
+        { path: '/Cartozo/forgotPassword', element: <ProtectAuthRoutes> <ForgotPassword /> </ProtectAuthRoutes> },
+        { path: '/Cartozo/signup', element: <ProtectAuthRoutes> <Signup /> </ProtectAuthRoutes> },
+        { path: '/Cartozo/allorders', element: <ProtectedRoute> <AllOrders /> </ProtectedRoute> },
+        { path: '/Cartozo/products/category/:id', element: <ProtectedRoute> <ProductsByCategory /> </ProtectedRoute> },
+        { path: '/Cartozo/products/brand/:id', element: <ProtectedRoute> <ProductsByBrand /> </ProtectedRoute> },
+        { path: '/Cartozo/ProductDetails/:id', element: <ProtectedRoute> <ProductDetails /> </ProtectedRoute> },
+        { path: '/Cartozo/ShippingAddress/:id', element: <ProtectedRoute> <ShippingAddress /> </ProtectedRoute> },
+        { path: '/Cartozo/categories', element: <ProtectedRoute> <Categories /> </ProtectedRoute> },
+        { path: '/Cartozo/wishlist', element: <ProtectedRoute> <Wishlist /> </ProtectedRoute> },
+        { path: '/Cartozo/brands', element: <ProtectedRoute> <Brands /> </ProtectedRoute> },
+        { path: '/Cartozo/forgotPassword/resetPassword', element: <ProtectAuthRoutes> <ResetPassword /> </ProtectAuthRoutes> },
+        { path: '/Cartozo/*', element: <NotFound /> },
       ]
     }
   ])
@@ -55,7 +55,7 @@ export default function App() {
     <>
       <QueryClientProvider client={queryClient}>
         <AuthContextProvider>
-          <RouterProvider router={router} />
+          <RouterProvider router={router}  />
         </AuthContextProvider>
       </QueryClientProvider>
     </>

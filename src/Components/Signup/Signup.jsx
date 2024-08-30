@@ -32,10 +32,10 @@ export default function Signup() {
     setIsLoading(true)
 
     axios.post('https://ecommerce.routemisr.com/api/v1/auth/signup', values)
-      .then(({ data }) => {
+      .then(() => {
         setIsLoading(false)
-        navigate('/login')
-        toast.success(data.message, {
+        navigate('/Cartozo/login')
+        toast.success('Account created successfully', {
           position: "bottom-right",
           autoClose: 10000,
           hideProgressBar: false,
@@ -48,7 +48,7 @@ export default function Signup() {
       })
       .catch(({ response }) => {
         setIsLoading(false)
-        toast.success(response.data.message, {
+        toast.error(response.data.message, {
           position: "bottom-right",
           autoClose: 10000,
           hideProgressBar: false,
@@ -130,7 +130,7 @@ export default function Signup() {
           {touched.phone && <p className='text-red-500'>{errors.phone}</p>}
 
           <button type="submit" className='block w-full bg-teal-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2 disabled:bg-gray-300' disabled={isLoading}>Sign Up {isLoading && <i class="fa-solid fa-spinner fa-spin"></i>} </button>
-          <span className="text-sm ml-2 cursor-pointer">Already have an account ?  <Link className='hover:text-teal-500 text-[16px] font-semibold' to={'/login'}> Login </Link></span>
+          <span className="text-sm ml-2 cursor-pointer">Already have an account ?  <Link className='hover:text-teal-500 text-[16px] font-semibold' to={'/Cartozo/login'}> Login </Link></span>
         </form>
       </div>
     </div>

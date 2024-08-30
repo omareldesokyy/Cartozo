@@ -1,11 +1,13 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function CartItem({ product, setCart, cart }) {
     const [decrementBTN, setDecrementBTN] = useState(false)
     const [productCounter, setProductCounter] = useState(product?.count)
     const [increaseLoad, setIncreaseLoad] = useState(false);
     const [decreaseLoad, setDecreaseLoad] = useState(false);
+    const navigate  = useNavigate();
 
     async function deleteProductFromCart(id) {
         await axios.delete('https://ecommerce.routemisr.com/api/v1/cart/' + id,
@@ -36,6 +38,10 @@ export default function CartItem({ product, setCart, cart }) {
         })
     }
 
+    function goToProductDetails(productId) {
+        navigate('/Cartozo/ProductDetails/' + productId);
+    }
+
     useEffect(() => {
         setProductCounter(product?.count)
         if (product.count == 1) {
@@ -47,9 +53,9 @@ export default function CartItem({ product, setCart, cart }) {
         <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm  md:p-6">
 
             <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
-                <a href="#" className="shrink-0 md:order-1">
-                    <img className="w-32" src={product?.product.imageCover} alt="imac image" />
-                </a>
+                <div onClick={()=>{goToProductDetails(product?.product._id)}} className="cursor-pointer shrink-0 md:order-1">
+                    <img className="w-32" src={product?.product.imageCover} alt="product image" />
+                </div>
 
                 <div className="flex items-center justify-between md:order-3 md:justify-end">
                     <div className="flex items-center">
@@ -82,7 +88,7 @@ export default function CartItem({ product, setCart, cart }) {
                 </div>
 
                 <div className="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
-                    <a href="#" className="text-base font-medium text-gray-900 hover:underline ">{product?.product.title}</a>
+                    <p onClick={()=>{goToProductDetails(product?.product._id)}} className="cursor-pointer text-base font-medium text-gray-900 hover:underline ">{product?.product.title}</p>
 
                     <div className="flex items-center gap-4">
                         <button onClick={() => {
