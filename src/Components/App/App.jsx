@@ -30,7 +30,7 @@ export default function App() {
   const router = createBrowserRouter([
     {
       path: '', element: <Layout />, children: [
-        { path: '', element: <ProtectedRoute> <Home /> </ProtectedRoute> },
+        { index:true , element: <ProtectedRoute> <Home /> </ProtectedRoute> },
         { path: '/home', element: <ProtectedRoute> <Home /> </ProtectedRoute> },
         { path: '/cart', element: <ProtectedRoute> <Cart /> </ProtectedRoute> },
         { path: '/products', element: <ProtectedRoute> <Products /> </ProtectedRoute> },
