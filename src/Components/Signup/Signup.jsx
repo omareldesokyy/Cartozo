@@ -73,7 +73,7 @@ export default function Signup() {
       <div
         className="min-h-[calc(100vh-112px-268.8px)] relative hidden md:flex w-1/2 justify-center items-center bg-cover bg-no-repeat bg-center"
       >
-        <img className='h-56 min-h-[calc(100vh-112px-268.8px)] object-contain' src="./imgs/Signup.jpg" alt="signup image" />
+        <img className='h-56 min-h-[calc(100vh-112px-268.8px)] object-contain' src="/Cartozo/imgs/Signup.jpg" alt="signup image" />
         <div className="absolute border-orange-400 -bottom-32 -left-40 w-80 h-80 border-4 rounded-full  border-t-8"></div>
         <div className="absolute border-orange-400 -bottom-40 -left-20 w-80 h-80 border-4 rounded-full  border-t-8"></div>
         <div className="absolute border-orange-400 -top-40 -right-0 w-80 h-80 border-4 rounded-full  border-t-8"></div>

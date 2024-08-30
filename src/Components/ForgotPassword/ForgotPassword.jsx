@@ -62,7 +62,7 @@ export default function ForgotPassword() {
       <div
         className="min-h-[calc(100vh-112px-268.8px)] relative hidden md:flex w-1/2 justify-center items-center bg-cover bg-no-repeat bg-center"
       >
-        <img className='h-56 min-h-[calc(100vh-112px-268.8px)] object-contain' src="./imgs/forgotpassword.jpg" alt="forgot password images" />
+        <img className='h-56 min-h-[calc(100vh-112px-268.8px)] object-contain' src="/Cartozo/imgs/forgotpassword.jpg" alt="forgot password images" />
         <div className="absolute -bottom-24 -left-24 w-64 h-64 border-4 rounded-full border-blue-400 border-t-8"></div>
         <div className="absolute -bottom-32 -left-8 w-64 h-64 border-4 rounded-full border-blue-400 border-t-8"></div>
         <div className="absolute -top-32 -right-8 w-64 h-64 border-4 rounded-full border-blue-400 border-t-8"></div>
